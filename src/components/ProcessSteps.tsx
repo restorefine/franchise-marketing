@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useFranchiseModal } from "@/components/FranchiseModalProvider";
+import Link from "next/link";
 import { ArrowIcon } from "@/components/icons";
 import { images } from "@/lib/images";
 
@@ -33,8 +31,6 @@ const steps = [
 ];
 
 export default function ProcessSteps() {
-  const { openModal } = useFranchiseModal();
-
   return (
     <section id="process" className="bg-paper">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
@@ -47,13 +43,13 @@ export default function ProcessSteps() {
               From application to opening day
             </h2>
           </div>
-          <button
-            onClick={openModal}
+          <Link
+            href="/join"
             className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition hover:bg-ink-soft"
           >
             Start your application
             <ArrowIcon className="h-4 w-4" />
-          </button>
+          </Link>
         </div>
 
         <div className="relative mt-14 aspect-[16/6] w-full overflow-hidden rounded-3xl">

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
-import { FranchiseModalProvider } from "@/components/FranchiseModalProvider";
-import FranchiseModal from "@/components/FranchiseModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const manrope = Manrope({
@@ -33,11 +31,8 @@ export default function RootLayout({
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] font-sans">
-        <FranchiseModalProvider>
-          {children}
-          <FranchiseModal />
-          <WhatsAppButton />
-        </FranchiseModalProvider>
+        {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useFranchiseModal } from "@/components/FranchiseModalProvider";
+import Link from "next/link";
 import { CloseIcon, MenuIcon } from "@/components/icons";
 
 const links = [
@@ -13,7 +13,6 @@ const links = [
 ];
 
 export default function Navbar() {
-  const { openModal } = useFranchiseModal();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -36,12 +35,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={openModal}
+          <Link
+            href="/join"
             className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-ink-soft sm:inline-block"
           >
             Join Our Franchise
-          </button>
+          </Link>
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="flex h-10 w-10 items-center justify-center rounded-full text-ink lg:hidden"
@@ -69,15 +68,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <button
-              onClick={() => {
-                setMobileOpen(false);
-                openModal();
-              }}
-              className="mt-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper"
+            <Link
+              href="/join"
+              onClick={() => setMobileOpen(false)}
+              className="mt-2 rounded-full bg-ink px-5 py-2.5 text-center text-sm font-semibold text-paper"
             >
               Join Our Franchise
-            </button>
+            </Link>
           </div>
         </div>
       )}

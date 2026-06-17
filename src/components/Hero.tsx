@@ -1,12 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import { useFranchiseModal } from "@/components/FranchiseModalProvider";
+import Link from "next/link";
 import { images } from "@/lib/images";
 
 export default function Hero() {
-  const { openModal } = useFranchiseModal();
-
   return (
     <section id="top" className="relative overflow-hidden bg-cream">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:px-10 lg:py-24">
@@ -28,12 +24,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <button
-              onClick={openModal}
+            <Link
+              href="/join"
               className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition hover:bg-ink-soft"
             >
               Join Our Franchise →
-            </button>
+            </Link>
             <a
               href="#why"
               className="rounded-full border border-ink px-7 py-3.5 text-sm font-semibold text-ink transition hover:bg-ink hover:text-paper"

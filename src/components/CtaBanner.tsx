@@ -1,10 +1,6 @@
-"use client";
-
-import { useFranchiseModal } from "@/components/FranchiseModalProvider";
+import Link from "next/link";
 
 export default function CtaBanner() {
-  const { openModal } = useFranchiseModal();
-
   return (
     <section className="bg-ink">
       <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:px-10">
@@ -16,12 +12,12 @@ export default function CtaBanner() {
           franchise development team will follow up within 2–3 business
           days.
         </p>
-        <button
-          onClick={openModal}
-          className="mt-8 rounded-full bg-paper px-8 py-3.5 text-sm font-semibold text-ink transition hover:bg-gold-soft"
+        <Link
+          href="/join"
+          className="mt-8 inline-block rounded-full bg-paper px-8 py-3.5 text-sm font-semibold text-ink transition hover:bg-gold-soft"
         >
           Join Our Franchise
-        </button>
+        </Link>
       </div>
     </section>
   );
