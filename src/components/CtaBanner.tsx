@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CtaBanner() {
   return (
-    <section className="bg-ink">
+    <section className="bg-brand">
       <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:px-10">
         <h2 className="font-display text-3xl text-paper sm:text-4xl">
           Ready to bring MUMUSO to your city?
@@ -14,7 +14,7 @@ export default function CtaBanner() {
         </p>
         <Link
           href="/join"
-          className="mt-8 inline-block rounded-full bg-paper px-8 py-3.5 text-sm font-semibold text-ink transition hover:bg-gold-soft"
+          className="mt-8 inline-block rounded-full bg-paper px-8 py-3.5 text-sm font-semibold text-brand transition hover:bg-brand-soft"
         >
           Join Our Franchise
         </Link>

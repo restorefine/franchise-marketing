@@ -50,7 +50,7 @@ export default function JoinForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center gap-4 rounded-3xl bg-paper p-10 text-center shadow-xl">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-mist text-ink">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-soft text-brand">
           <CheckIcon className="h-7 w-7" />
         </div>
         <h3 className="font-display text-2xl text-ink">Application received</h3>
@@ -61,7 +61,7 @@ export default function JoinForm() {
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-2 rounded-full border border-ink px-6 py-2.5 text-sm font-medium text-ink transition hover:bg-ink hover:text-paper"
+          className="mt-2 rounded-full border border-brand px-6 py-2.5 text-sm font-medium text-brand transition hover:bg-brand hover:text-paper"
         >
           Submit another enquiry
         </button>
@@ -113,7 +113,7 @@ export default function JoinForm() {
             name="budget"
             required
             defaultValue=""
-            className="mt-1.5 w-full rounded-xl border border-mist-deep bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-ink"
+            className="mt-1.5 w-full rounded-xl border border-mist-deep bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-brand"
           >
             <option value="" disabled>
               Select a range
@@ -140,7 +140,7 @@ export default function JoinForm() {
             name="message"
             rows={3}
             placeholder="What excites you about bringing MUMUSO to your area?"
-            className="mt-1.5 w-full resize-none rounded-xl border border-mist-deep bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-ink"
+            className="mt-1.5 w-full resize-none rounded-xl border border-mist-deep bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-brand"
           />
         </div>
 
@@ -152,7 +152,7 @@ export default function JoinForm() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition hover:bg-ink-soft disabled:opacity-60"
+            className="w-full rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-paper transition hover:bg-brand/90 disabled:opacity-60"
           >
             {status === "submitting" ? "Submitting…" : "Submit application"}
           </button>
@@ -189,7 +189,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="mt-1.5 w-full rounded-xl border border-mist-deep bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-ink"
+        className="mt-1.5 w-full rounded-xl border border-mist-deep bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-brand"
       />
     </div>
   );

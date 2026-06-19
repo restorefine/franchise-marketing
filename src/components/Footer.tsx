@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const columns = [
   {
     title: "Franchise",
@@ -19,9 +21,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <p className="font-display text-2xl text-ink">
-              mumuso<span className="align-super text-[0.5em] text-gold">®</span>
-            </p>
+            <Image
+              src="/mumuso-logo.svg"
+              alt="MUMUSO"
+              width={160}
+              height={28}
+              className="h-7 w-auto"
+            />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               A premium, design-led lifestyle retail brand with stores across
               60+ countries. Now expanding through select franchise

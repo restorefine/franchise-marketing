@@ -45,7 +45,7 @@ export default function ProcessSteps() {
           </div>
           <Link
             href="/join"
-            className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition hover:bg-ink-soft"
+            className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-paper transition hover:bg-brand/90"
           >
             Start your application
             <ArrowIcon className="h-4 w-4" />

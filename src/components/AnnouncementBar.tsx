@@ -9,7 +9,7 @@ export default function AnnouncementBar() {
   const loop = [...messages, ...messages];
 
   return (
-    <div className="overflow-hidden bg-ink py-2.5 text-paper">
+    <div className="overflow-hidden bg-brand py-2.5 text-paper">
       <div className="animate-marquee flex w-max items-center gap-10 whitespace-nowrap text-xs font-medium tracking-wide">
         {loop.map((message, i) => (
           <span key={i} className="flex items-center gap-10">

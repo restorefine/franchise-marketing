@@ -52,7 +52,7 @@ export default function Categories() {
                 onClick={() => setActive(tab.key)}
                 className={`rounded-full px-5 py-2 text-sm font-medium transition ${
                   active === tab.key
-                    ? "bg-ink text-paper"
+                    ? "bg-brand text-paper"
                     : "text-ink-soft hover:text-ink"
                 }`}
               >

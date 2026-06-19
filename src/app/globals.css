@@ -12,6 +12,8 @@
   --color-mist-deep: #d9e6ee;
   --color-gold: #b8923f;
   --color-gold-soft: #e9d9b6;
+  --color-brand: #46b989;
+  --color-brand-soft: #e3f3ec;
 }
 
 @theme inline {
@@ -25,6 +27,8 @@
   --color-mist-deep: var(--color-mist-deep);
   --color-gold: var(--color-gold);
   --color-gold-soft: var(--color-gold-soft);
+  --color-brand: var(--color-brand);
+  --color-brand-soft: var(--color-brand-soft);
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
 }

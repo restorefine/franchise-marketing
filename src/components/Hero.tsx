@@ -26,13 +26,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               href="/join"
-              className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition hover:bg-ink-soft"
+              className="rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-paper transition hover:bg-brand/90"
             >
               Join Our Franchise →
             </Link>
             <a
               href="#why"
-              className="rounded-full border border-ink px-7 py-3.5 text-sm font-semibold text-ink transition hover:bg-ink hover:text-paper"
+              className="rounded-full border border-brand px-7 py-3.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-paper"
             >
               See the model
             </a>

@@ -22,8 +22,8 @@ export default function TrustBar() {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-ink px-8 py-7 text-paper">
-          <p className="text-sm uppercase tracking-wide text-gold-soft">
+        <div className="rounded-2xl bg-brand px-8 py-7 text-paper">
+          <p className="text-sm uppercase tracking-wide text-paper/80">
             Partner satisfaction
           </p>
           <p className="mt-1 font-display text-3xl">4.9 / 5</p>
@@ -32,7 +32,7 @@ export default function TrustBar() {
           </p>
           <a
             href="#process"
-            className="mt-4 inline-block text-sm font-semibold underline decoration-gold-soft underline-offset-4"
+            className="mt-4 inline-block text-sm font-semibold underline decoration-paper/60 underline-offset-4"
           >
             See how it works
           </a>

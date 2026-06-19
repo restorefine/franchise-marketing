@@ -26,7 +26,7 @@ export default function StorySplit() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-1 items-center justify-center rounded-3xl bg-ink text-paper">
+              <div className="flex flex-1 items-center justify-center rounded-3xl bg-brand text-paper">
                 <span className="font-display text-3xl">2017</span>
               </div>
             </div>

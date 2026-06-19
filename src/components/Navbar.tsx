@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { CloseIcon, MenuIcon } from "@/components/icons";
 
@@ -18,8 +19,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-mist bg-cream/90 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#top" className="font-display text-2xl tracking-tight text-ink">
-          mumuso<span className="align-super text-[0.5em] text-gold">®</span>
+        <a href="#top" className="flex items-center">
+          <Image
+            src="/mumuso-logo.svg"
+            alt="MUMUSO"
+            width={160}
+            height={28}
+            className="h-7 w-auto"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
@@ -37,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/join"
-            className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-ink-soft sm:inline-block"
+            className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-brand/90 sm:inline-block"
           >
             Join Our Franchise
           </Link>
@@ -71,7 +79,7 @@ export default function Navbar() {
             <Link
               href="/join"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 rounded-full bg-ink px-5 py-2.5 text-center text-sm font-semibold text-paper"
+              className="mt-2 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-semibold text-paper"
             >
               Join Our Franchise
             </Link>
