@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { images } from "@/lib/images";
+import { storyVideos } from "@/lib/productVideos";
 
 export default function StorySplit() {
   return (
@@ -8,22 +7,30 @@ export default function StorySplit() {
         <div className="relative mx-auto aspect-square w-full max-w-md">
           <div className="grid h-full grid-cols-2 gap-4">
             <div className="relative flex-1 overflow-hidden rounded-3xl">
-              <Image
-                src={images.storeInterior}
-                alt="MUMUSO store interior"
-                fill
-                sizes="240px"
-                className="object-cover"
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                src={storyVideos.storeInterior.src}
+                poster={storyVideos.storeInterior.poster}
+                aria-label={storyVideos.storeInterior.alt}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
               />
             </div>
             <div className="flex flex-col gap-4 pt-8">
               <div className="relative flex-1 overflow-hidden rounded-3xl shadow-sm">
-                <Image
-                  src={images.checkoutMoment}
-                  alt="Customer checkout moment"
-                  fill
-                  sizes="240px"
-                  className="object-cover"
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src={storyVideos.checkoutMoment.src}
+                  poster={storyVideos.checkoutMoment.poster}
+                  aria-label={storyVideos.checkoutMoment.alt}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
                 />
               </div>
               <div className="flex flex-1 items-center justify-center rounded-3xl bg-brand text-paper">

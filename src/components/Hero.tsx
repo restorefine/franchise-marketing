@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-import { images } from "@/lib/images";
+import { productVideos } from "@/lib/productVideos";
+
+const heroVideo = productVideos.accessories[0];
 
 export default function Hero() {
   return (
@@ -50,13 +51,16 @@ export default function Hero() {
           <div className="absolute -bottom-10 -left-6 h-48 w-48 rounded-full bg-mist-deep blur-2xl" />
 
           <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] shadow-2xl">
-            <Image
-              src={images.heroStorefront}
-              alt="Premium retail storefront"
-              fill
-              priority
-              sizes="(min-width: 1024px) 480px, 100vw"
-              className="object-cover"
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              src={heroVideo.src}
+              poster={heroVideo.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label={heroVideo.alt}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
             <div className="absolute inset-6 rounded-[1.75rem] border border-white/15" />

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { images } from "@/lib/images";
+import { productVideos } from "@/lib/productVideos";
+import ProductVideoTile from "@/components/ProductVideoTile";
 
 const tabs = [
   {
@@ -12,7 +12,7 @@ const tabs = [
     description:
       "K-beauty inspired skincare, cosmetics, and grooming essentials with consistent reorder demand.",
     margin: "48% avg. margin",
-    image: images.categoryBeauty,
+    videos: productVideos.beauty,
   },
   {
     key: "home",
@@ -21,16 +21,16 @@ const tabs = [
     description:
       "Curated decor, storage, and everyday living goods that keep customers returning seasonally.",
     margin: "42% avg. margin",
-    image: images.categoryHome,
+    videos: productVideos.home,
   },
   {
     key: "accessories",
     label: "accessories",
     title: "Fashion accessories",
     description:
-      "Bags, jewellery, and tech accessories — high-turnover items perfect for impulse purchases.",
+      "Bags, jewellery, tech accessories, and fun stationery finds — high-turnover items perfect for impulse purchases.",
     margin: "55% avg. margin",
-    image: images.categoryAccessories,
+    videos: productVideos.accessories,
   },
 ];
 
@@ -73,16 +73,7 @@ export default function Categories() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-sm">
-            <Image
-              key={current.key}
-              src={current.image}
-              alt={current.title}
-              fill
-              sizes="(min-width: 1024px) 560px, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <ProductVideoTile key={current.key} videos={current.videos} />
         </div>
       </div>
     </section>
